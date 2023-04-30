@@ -1,0 +1,230 @@
+{{! 
+Це код container файлу для summary сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/mac"
+}}
+
+<div>
+	<ul>
+		<div class="card text-center">
+			<div class=""card body">
+				<h1 class="card title">{{name}}</h5>
+				<br>
+				<h2 class="card-text">{{description}}</h2>
+				<br>
+				<h4 class="card-text">Price: {{price}}</h4>
+				<br>
+				<h4 class="card-text">Category: {{category}}</h4>
+				<br>
+				{{#with features}}
+					<div class="accordion accordion-flush" id="accordionFlushExample">
+						<div class="accordion-item">
+							<h3 class="accordion-header">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+									Processor
+								</button>
+							</h3>
+							<div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+								<div class="accordion-body">
+									<dl class='row'>
+										<dt class='col-sm-3'>Brand</dt>
+										<dd class='col-sm-9'>
+											<p>{{processor.brand}}</p>
+										<dt class='col-sm-3'>Model</dt>
+										<dd class='col-sm-9'>
+											<p>{{processor.model}}</p>	
+										<dt class='col-sm-3'>Speed</dt>
+										<dd class='col-sm-9'>
+											<p>{{processor.speed}}</p>
+										<dt class='col-sm-3'>Cores</dt>
+										<dd class='col-sm-9'>
+											<p>{{processor.cores}}</p>
+										<dt class='col-sm-3'>Cache</dt>
+										<dd class='col-sm-9'>
+											<p>{{processor.cache}}</p>			
+										</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h3 class="accordion-header">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+									Memory
+								</button>
+							</h3>
+							<div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+								<div class="accordion-body">
+									<dl class='row'>
+										<dt class='col-sm-3'>Type</dt>
+										<dd class='col-sm-9'>
+											<p>{{memory.type}}</p>
+										<dt class='col-sm-3'>Model</dt>
+										<dd class='col-sm-9'>
+											<p>{{memory.size}}</p>	
+										<dt class='col-sm-3'>Speed</dt>
+										<dd class='col-sm-9'>
+											<p>{{memory.speed}}</p>
+									</dl>
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h3 class="accordion-header">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+									Storage
+								</button>
+							</h3>
+							<div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+								<div class="accordion-body">
+									<dl class='row'>
+										<dt class='col-sm-3'>Type</dt>
+										<dd class='col-sm-9'>
+											<p>{{storage.type}}</p>
+										<dt class='col-sm-3'>Model</dt>
+										<dd class='col-sm-9'>
+											<p>{{storage.size}}</p>	
+									</dl>
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h3 class="accordion-header">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+									Display
+								</button>
+							</h3>
+							<div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+								<div class="accordion-body">
+									<dl class='row'>
+										<dt class='col-sm-3'>Size</dt>
+										<dd class='col-sm-9'>
+											<p>{{display.size}}</p>
+										<dt class='col-sm-3'>Resolution</dt>
+										<dd class='col-sm-9'>
+											<p>{{display.resolution}}</p>
+										<dt class='col-sm-3'>Technology</dt>
+										<dd class='col-sm-9'>
+											<p>{{display.technology}}</p>
+										<dt class='col-sm-3'>Color space</dt>
+										<dd class='col-sm-9'>
+											<p>{{display.color_space}}</p>
+										<dt class='col-sm-3'>Brightness</dt>
+										<dd class='col-sm-9'>
+											<p>{{display.brightness}}</p>
+										<dt class='col-sm-3'>Refresh rate</dt>
+										<dd class='col-sm-9'>
+											<p>{{display.refresh_rate}}</p>				
+									</dl>
+								</div>	
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h3 class="accordion-header">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+									Graphics
+								</button>
+							</h3>
+							<div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+								<div class="accordion-body">
+									<dl class='row'>
+										<dt class='col-sm-3'>Brand</dt>
+										<dd class='col-sm-9'>
+											<p>{{graphics.brand}}</p>
+										<dt class='col-sm-3'>Model</dt>
+										<dd class='col-sm-9'>
+											<p>{{graphics.model}}</p>	
+										<dt class='col-sm-3'>Memory</dt>
+										<dd class='col-sm-9'>
+											<p>{{graphics.memory}}</p>
+									</dl>
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h3 class="accordion-header">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+									Ports
+								</button>
+							</h3>
+							<div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+								<div class="accordion-body">
+									<ul>
+										{{#each ports}}
+											<p>Type {{type}} count {{count}} {{#if features includeZero=false}} ({{features}}) {{/if}}</p>
+										{{/each}}		
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h3 class="accordion-header">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+									Battery
+								</button>
+							</h3>
+							<div id="flush-collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+								<div class="accordion-body">
+									<dl class='row'>
+										<dt class='col-sm-3'>Type</dt>
+										<dd class='col-sm-9'>
+											<p>{{battery.type}}</p>
+										<dt class='col-sm-3'>Capacity</dt>
+										<dd class='col-sm-9'>
+											<p>{{battery.capacity}}</p>	
+										<dt class='col-sm-3'>Life</dt>
+										<dd class='col-sm-9'>
+											<p>{{battery.life}}</p>
+									</dl>
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h3 class="accordion-header">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
+									Weight, dimensions
+								</button>
+							</h3>
+							<div id="flush-collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+								<div class="accordion-body">
+									<dl class='row'>
+										<dt class='col-sm-3'>Weight:</dt>
+										<dd class='col-sm-9'>
+											<p>{{weight}}</p>
+										<dt class='col-sm-3'>Height:</dt>
+										<dd class='col-sm-9'>
+											<p>{{dimensions.height}}</p>	
+										<dt class='col-sm-3'>Width:</dt>
+										<dd class='col-sm-9'>
+											<p>{{dimensions.width}}</p>
+										<dt class='col-sm-3'>Depth:</dt>
+										<dd class='col-sm-9'>
+											<p>{{dimensions.depth}}</p>
+									</dl>		
+								</div>
+							</div>
+						</div>
+						<br>
+						<ul>		
+							<b>Operating system: {{operating_system}}</b>
+						</ul>	
+						<br>
+						<ul>
+							<h5 class="card-text">Accessories:</h5>
+						</ul>	
+						<br>	
+						<ul>
+							{{#each accessories}}
+								<p>{{name}} - {{price}}</p>
+							{{/each}}	
+						</ul>	
+					</div>	
+				{{/with}}
+			</div>
+		</div>
+	</ul>	
+</div>
+
+{{!-- 
+    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+    Адже наш layout/mac.hbs має вже структуру HTML
+--}}
