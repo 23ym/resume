@@ -1,0 +1,205 @@
+{{! 
+Це код container файлу для task22 сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/task22"
+}}
+<main>
+    <div>
+        <section>
+            {{#with page_header}}
+                <div>
+                    <p class='h1 text-center'>{{title}}</p>
+                </div>
+                <br>
+                <div>
+                    <p class='text-uppercase text-center'><b
+                        >{{description}}</b></p>
+                </div>
+            {{/with}}
+        </section>
+    </div>    
+    <div>
+        <br>
+        {{#with section}}
+            <section>
+                <div class='card'>
+                    <div class='card-body'>
+                        <h1 class='display-6 text-end'><b
+                            >{{about_us.title_list.main}}</b></h1>
+                        <br>
+                        <p
+                            class='h2 text-end'
+                        >{{about_us.title_list.sub}}</p>
+                    </div>
+                    <div>
+                        <ul>
+                            <button
+                                type='button'
+                                class='btn btn-outline-info'
+                                >{{about_us.button.text}}
+                            </button>
+                        </ul>
+                    </div>
+                </div>    
+            </section>
+            <div>
+                <section>
+                    {{#with advantage}}
+                        <div class='card'>
+                        <div class='card-body'>
+                            <h1 class='display-5 text-secondary'><b
+                            >{{title}}</b>
+                            </h1>
+                            <br />
+                            <div class='card'>
+                            <div class='card-body'>
+                                <div>
+                                <h1
+                                    class='display-4 text-secondary'
+                                ><b>{{efficiency.title}}</b>
+                                </h1>
+                                </div>
+                                <br />
+                                <div>
+                                <p
+                                    class='h6'
+                                >{{efficiency.sub_title}}</p>
+                                </div>
+                                <br />
+                                <div>
+                                <p
+                                    class='bold'
+                                >{{efficiency.description}}</p>
+                                </div>
+                                <div>
+                                <br />
+                                <button
+                                    type='button'
+                                    class='btn btn-outline-warning'
+                                >{{efficiency.button}}
+                                </button>
+                                </div>
+                            </div>
+                            </div>
+                            <br>
+                            <div class='card'>
+                            <div class='card-body'>
+                                    {{#with innovation}}
+                                        <div>
+                                            <h1
+                                                class='display-4 text-secondary text-center'
+                                            ><b>{{title}}</b>
+                                            </h1>
+                                        </div>
+                                        <br>
+                                        <div>
+                                            <p
+                                                class='h6 text-center'
+                                            >{{sub_title}}</p>
+                                        </div>
+                                        <br>
+                                        <div>
+                                            <p
+                                                class='bold text-center'
+                                            >{{description}}</p>
+                                        </div>
+                                        <br>
+                                        <div>
+                                            <button
+                                                type='button'
+                                                class='btn btn-outline-warning'
+                                            >{{button}}
+                                            </button>
+                                        </div>
+                                    {{/with}}    
+                                </div>
+                            </div>
+                            <br>
+                            <div class='card'>
+                                <div class='card-body'>
+                                    {{#with collaboration}}
+                                        <div>
+                                            <h1
+                                                class='display-4 text-secondary text-end'
+                                                ><b>{{title}}</b>
+                                            </h1>
+                                        </div>
+                                        <br>
+                                        <div>
+                                            <p
+                                                class='h6 text-end'
+                                            >{{sub_title}}</p>
+                                        </div>
+                                        <br>
+                                        <div>
+                                            <p 
+                                                class='bold text-end'
+                                            >{{description}}</p>
+                                        </div>
+                                        <br>
+                                        <div>
+                                            <button
+                                                    type='button'
+                                                    class='btn btn-outline-warning'
+                                                >{{button}}
+                                            </button>
+                                        </div>
+                                    {{/with}}    
+                                </div>
+                            </div>
+                        </div>
+                        </div> 
+                    {{/with}}
+                </section>
+                <br>
+                <section>
+                        <div class='card'>
+                            <div class='card-body'>
+                                {{#with agreement}}
+                                    <div>
+                                        <h1
+                                            class='display-5'
+                                            ><b>{{title}}</b>
+                                        </h1>
+                                    </div>
+                                    <br>
+                                    <div>
+                                        <div class='card'>
+                                            <div class='card-body'>
+                                                <div>
+                                                    <p
+                                                        class='h5'
+                                                    >{{info.sub_title}}</p>
+                                                </div>
+                                                <br>
+                                                <div>
+                                                    <div class='card'>
+                                                        <div class='card-body'>
+                                                            <p
+                                                                class='bold'
+                                                                >{{info.detail.text}}</p>
+                                                        </div>
+                                                        <br>
+                                                        <div>
+                                                            <ul>
+                                                                <button type="button" class="btn btn-success">{{info.detail.button}}</button>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>            
+                                {{/with}}    
+                            </div>
+                        </div>
+                    </section>   
+                </div> 
+            </div>
+        {{/with}}
+    </div>  
+</main>
+
+{{!-- 
+    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+    Адже наш layout/default.hbs має вже структуру HTML
+--}}
