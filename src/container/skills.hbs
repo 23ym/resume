@@ -1,13 +1,13 @@
 {{! 
 Це код container файлу для summary сторінки, 
-в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - '/summary'
 }}
 
 <div>
 	{{#with main}}
  		<main>
   			<section>
-				 {{> title data="All skills" big=true}}
+				 {{> title data='All skills' big=true}}
       			<ul>
 					{{#each skills}}
 						<li>
@@ -30,7 +30,7 @@
     		</section>
 			
 			<section>
-				 {{> title data="My hobbies"}}
+				 {{> title data='My hobbies'}}
       			<ul>
 					{{#each hobbies}}
 						<ol>

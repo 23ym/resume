@@ -1,6 +1,6 @@
 {{! 
 Це код container файлу для car сторінки, 
-в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/task21"
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - '/task21'
 }}
 <main>
     <div class='card'>
@@ -16,7 +16,7 @@
                             </div>
                             <div>
                                 <ul>
-                                    <p class="fw-bold">{{main.text}}</p>
+                                    <p class='fw-bold'>{{main.text}}</p>
                                 </ul>
                             </div>
                             <div>
@@ -52,7 +52,7 @@
                         </div>
                         <div>
                             <ul>
-                                <p class="fw-bold">{{second.text}}</p>
+                                <p class='fw-bold'>{{second.text}}</p>
                             </ul>
                         </div>
                         <div>
@@ -88,7 +88,7 @@
                         </div>
                         <div>
                             <ul>
-                                <p class="fw-bold">{{subblock.text}}</p>
+                                <p class='fw-bold'>{{subblock.text}}</p>
                             </ul>
                         </div>
                         <div>
@@ -105,7 +105,7 @@
                             <ul>
                                 <button
                                     type='button'
-                                    class='btn btn-outline-dark' class="text-dark"
+                                    class='btn btn-outline-dark' class='text-dark'
                                     >{{subblock.button_text.outline}}
                                 </button>
                             </ul>
@@ -125,24 +125,24 @@
                 <div>
                     {{#with nested_display}}
                         <div>
-                            <h1 class="display-1"><strong>{{title}}</strong></h1>
+                            <h1 class='display-1'><strong>{{title}}</strong></h1>
                         </div>
                         <div class='card'>
                             <div class='card-body'>
                                 <ul>
-                                    <h1 class="display-4"><strong>{{children_display.title}}</strong></h1>
+                                    <h1 class='display-4'><strong>{{children_display.title}}</strong></h1>
                                 </ul>
                             </div>
                             <div>
                                 <ul>
-                                    <p class="fw-bold">{{children_display.text}}</p>
+                                    <p class='fw-bold'>{{children_display.text}}</p>
                                 </ul>
                             </div>
                             <div>
                                 <ul>
                                     <button
-                                        type="button" 
-                                        class="btn btn-outline-warning"
+                                        type='button' 
+                                        class='btn btn-outline-warning'
                                         >{{children_display.button.text}}
                                     </button>
                                 </ul>
@@ -173,15 +173,15 @@
                 <div>
                     {{#with paragraph}}
                         <div>
-                            <p class="text-uppercase"><b>{{title}}</b></p>
+                            <p class='text-uppercase'><b>{{title}}</b></p>
                         </div>
                         <br>
                         <div>
-                            <p class="text-lowercase"><b>{{text}}</b></p>
+                            <p class='text-lowercase'><b>{{text}}</b></p>
                         </div>
                         <br>
                         <div>
-                            <p><a href="{{button.url}}" style="text-decoration:none"><b>{{button.text}}</b></a></p>
+                            <p><a href='{{button.url}}' style='text-decoration:none'><b>{{button.text}}</b></a></p>
                         </div>
                         <br>
                         <div class='card'>
@@ -190,7 +190,7 @@
                                     <div>
                                         {{#each list_name}}
                                             <li>
-                                                <a href="{{list_url}}" style="text-decoration:none"><b>{{text}}</b></a>
+                                                <a href='{{list_url}}' style='text-decoration:none'><b>{{text}}</b></a>
                                             </li>
                                         {{/each}}
                                     </div>
