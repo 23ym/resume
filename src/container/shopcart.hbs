@@ -1,6 +1,6 @@
 {{! 
-Це код container файлу для task31 сторінки, 
-в якому міститься код, котрий буде віддаватися по шляху (PATH) - '/task31'
+Це код container файлу для shopcart сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - '/shopcart'
 }}
 <main>
     <div class='row gy-2'>
@@ -45,57 +45,14 @@
         <hr>
         <section class='col-12'>
             {{#each goodsBlock}}
-                <div class='card mb-3'>
-                    <div class='row'>
-                        <div class='container col-2'>
-                            <div class='col-12 m-2'>
-                                <div>
-                                    <img 
-                                    src={{image}} 
-                                    class='img-fluid rounded-start' 
-                                    alt='...'
-                                    >
-                                </div>
-                            </div>
-                        </div>
-                        <div class='container col-4'>
-                            <div class='col-12'>
-                                <div class='card-body'>
-                                    <h5 class='card-title'><small>{{name}}</small></h5>
-                                    <p class='card-text'><small>{{description}}</small></p>
-                                </div>
-                            </div>  
-                        </div>
-                        <div class='container col-2'>
-                            <div class='col-12'>
-                                {{#with price}}
-                                    <div>
-                                        <h5 class='card-title mt-4'>{{title}}:</h5>
-                                        <p class='card-text mt-2'><p class='h5'><strong>{{value}}</strong></p>
-                                    </div>
-                                {{/with}}           
-                            </div>
-                        </div>
-                        <div class='container col-2'>
-                            <div class='col-12 mt-3'>
-                                <div>
-                                    <p class='card-text pt-4'><strong>{{amount}}</strong></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class='container col-2'>
-                            <div class='col-12 mt-3 me-3'>
-                                {{#each buttons}} 
-                                    <button class='btn      
-                                        {{#if isPrimary}} btn-primary{{/if}}
-                                        {{#if isDanger}} btn-outline-danger mt-3{{/if}}' 
-                                        type='button'><strong>{{text}}</strong>
-                                    </button>
-                                {{/each}}
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {{> cartGoodsItem}}
+
+                {{#with price}}
+                {{/with}}     
+                
+                {{#each buttons}} 
+                {{/each}}
+            
             {{/each}}
         </section>
         <hr>
@@ -201,23 +158,6 @@
     </div>
 </main>
 
-
-         
-               
-           
-               
-               
-               
-               
-               
-               
-                    
-                    
-
-                       
-                
-                   
-                   
 {{!-- 
 	Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
 	Адже наш layout/default.hbs має вже структуру HTML
