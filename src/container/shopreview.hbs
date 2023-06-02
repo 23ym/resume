@@ -1,0 +1,259 @@
+{{! 
+Це код container файлу для shopreview сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - '/shopreview'
+}}
+<main>
+    <div class='row gy-2'>
+        <section class='col-12'>
+            <div class='card'>
+                {{#with navigation}}
+                    <div>
+                        <ul class='nav pb-3 pt-3'>
+                            <li class='nav-item'>
+                                {{#each links}}
+                                <li class='nav-item'>
+                                    <a class='nav-link fw-semibold' 
+                                        href='{{href}}'>
+                                        {{text}}
+                                    </a>
+                                </li>
+                                {{/each}}
+                            </li>
+                            <li class='nav-item'>
+                                <a class='nav-link disabled fw-semibold'>Disabled</a>
+                            </li>
+                        </ul>
+                    </div>
+                {{/with}}
+            </div>
+        </section>
+        <sections class='col-12 mt-4'>
+            <div class='row'>
+                {{#with formBlock}}
+                    <sections class='col-8 mt-3'>
+                        <sections class='col-12'>
+                            <div>
+                                <h1>{{header}}</h1>
+                            </div>   
+                            {{#with rating}} 
+                                <div>
+                                    <p class='h5 mt-4'>
+                                        {{title}} : {{value}}
+                                    </p>
+                                </div>
+                            {{/with}} 
+                        </sections>
+                        <sections class='col-12'>
+                            {{#with actionBlock}}
+                                <div class='nav nav-tabs mt-5 mb-5'>
+                                    {{#each tabs}}
+                                        <div class='col-4'>
+                                            <li class='nav-item'>
+                                                {{#if isActive}}
+                                                    <a class='nav-link active text-center fs-5 fw-medium
+                                                        ' aria-current='page' 
+                                                        href='#'>{{text}}
+                                                    </a>
+                                                {{/if}}
+                                                {{#unless  isActive}}
+                                                    {{#unless isDisabled}}
+                                                        <a class='nav-link text-center fs-5
+                                                            ' aria-current='page' 
+                                                            href='#'>{{text}}
+                                                        </a>
+                                                    {{/unless}}
+                                                {{/unless}}
+                                            </li>
+                                        </div> 
+                                    {{/each}}
+                                </div>     
+                                <hr>
+                                {{#with report}}
+                                    <div class='card mt-5 mb-5'>
+                                        <div class='card-body'>
+                                            <h5 class='card-title'>{{title}}</h5>
+                                            {{#with button}}
+                                                <a href={{link}} 
+                                                    class='btn btn-secondary btn-lg mt-3'>
+                                                    {{text}}
+                                                </a>
+                                            {{/with}}    
+                                        </div>
+                                    </div>
+                                {{/with}} 
+                            {{/with}}   
+                        </sections>
+                        <hr>
+                        <sections class='col-12'>
+                            {{#with feedbackBlock}}
+                                <div class='text mt-5 mb-5'>
+                                    <h2>{{title}}</h2>
+                                </div>
+                                <div>
+                                    {{#each buttons}}
+                                        <a class='btn fw-medium me-2 mb-5 
+                                            {{#if isWarning}} 
+                                                btn-warning text-light    
+                                            {{/if}}  
+                                            {{#if isSuccess}} 
+                                                btn-success ms-2
+                                            {{/if}} 
+                                            {{#if isDanger}} 
+                                                btn-danger ms-2
+                                            {{/if}}' 
+                                                href={{link}} 
+                                                role='button'
+                                            > {{text}}
+                                        </a>
+                                    {{/each}}
+                                </div>
+                            {{/with}}
+                        </sections>
+                    </sections>
+                    <sections class='col-4'>
+                        {{#with goodsInfo}}
+                            <div class='card mt-4 mb-3'>
+                                <div class='card-body p-3'>
+                                    <img src={{photo}} 
+                                        class='card-img-top' 
+                                        alt='...'
+                                    >
+                                    <h5 class='card-title fs-3 pt-4'>
+                                        {{name}}
+                                    </h5>
+                                </div>
+                            </div> 
+                            <div class='card mb-3'>
+                                <div class='card-body'>
+                                    <h5 class='card-title fs-3 pb-2'>
+                                        {{price}}
+                                    </h5>
+                                    <div>
+                                        <p class='fw-medium'>
+                                            {{#if inMarket}} 
+                                                Є в наявності 
+                                            {{/if}}
+                                        </p> 
+                                    </div>
+                                    <div>
+                                        {{#each buttons}}
+                                            <div class='flex-column'>
+                                                <a class='btn        
+                                                    {{#if isPrimary}}
+                                                        btn-primary fw-medium fs-5 
+                                                    {{/if}}
+                                                    {{#if isSecondary}} 
+                                                        btn-secondary mt-2 fs-5 
+                                                    {{/if}}' 
+                                                    href={{link}} 
+                                                    role='button'>
+                                                    {{text}}
+                                                </a>
+                                            </div>
+                                        {{/each}}
+                                    </div>
+                                </div>    
+                            </div> 
+                            <div class='card mt-3 mb-5'>
+                                <div class='card-body'>
+                                    {{#with seller}}
+                                        <h5 class='card-title fs-5 pt-2 pb-2'>
+                                            {{title}} : <strong>{{value}}</strong>
+                                        </h5>
+                                    {{/with}}
+                                </div>
+                            </div> 
+                        {{/with}}
+                    </sections>
+                {{/with}}
+            </div>
+        </sections>
+        <hr>
+        <sections class='col-12'>
+            {{#each reviewList}}
+                 {{>reviewItem}}
+                    
+                                {{#with title}}
+                                {{/with}}
+                           
+                            {{#with reviewBody}}
+                               
+                                        {{#with seller}}
+                                        {{/with}}
+                                    
+                                    
+                                        {{#with rating}}
+                                        {{/with}}
+                                   
+                                   
+                                        {{#each text}}
+                                        {{/each}}
+                                    
+                                   
+                                        {{#with advantages}}
+                                        {{/with}}
+                                   
+                                    
+                                        {{#with disadvantages}}
+                                        {{/with}}
+                                   
+                                    
+                                        {{#each images}}
+                                        {{/each}}
+                                    
+                               
+                                
+                                    {{#each coments}}
+                                    {{/each}}
+                               
+                            {{/with}}
+                       
+            {{/each}}    
+        </sections>
+        <section class='col-12'>
+            {{#with service}}
+                <div class='card mb-5'>
+                    <div class='card text-bg-success text-center'>
+                        <div class='card-body'>
+                            <h2 class='card-title pb-3'>
+                                {{title}}
+                            </h2>
+                            <p class='card-text pb-3'>
+                                {{description}}
+                            </p>
+                            {{#each buttons}}
+                                <div class='col-3 mx-auto'>
+                                    <a
+                                        href='{{link}}'
+                                        class='btn btn-primary fs-5 py-2'
+                                        >{{text}}
+                                    </a>
+                                </div>
+                            {{/each}}
+                        </div>
+                    </div>
+                </div>
+            {{/with}}
+        </section>
+        <hr>
+        <section class='col-12'>
+            <div class='nav'>
+                {{#each footer}}
+                    <div class='col-2 g-2'>
+                        {{#each this}}
+                            <div class='nav flex-column'>
+                                <div class='nav-item fw-semibold'>
+                                    <a
+                                        class='nav-link  {{#if @last}} disabled {{/if}}'
+                                        href='{{link}}'
+                                        >{{text}}
+                                    </a>
+                                </div>
+                            </div>
+                        {{/each}}
+                    </div>
+                {{/each}}
+            </div>
+        </section>
+    </div>
+</main>
