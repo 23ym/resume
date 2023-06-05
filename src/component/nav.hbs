@@ -1,4 +1,4 @@
-<nav>
+{{!-- <nav>
 	{{> link text="Summary" href="/summary" line=true}}
 	{{> link text="Skills" href="/skills" line=true }}
 	{{> link text="Education" href="/education" line=true }}
@@ -6,4 +6,188 @@
 	{{> link text="Resume" href="/person" line=true }}
 	{{> link text="JavaScript" href="/js" line=true }}
 	{{> link text="Car" href="/car" line=true noLine=true }}
+</nav> --}}
+
+<nav class='navbar navbar-expand-lg bg-body-tertiary'>
+  <div class='container-fluid'>
+    <a class='navbar-brand' href='/index'>
+      Home
+    </a>
+    <button
+      class='navbar-toggler'
+      type='button'
+      data-bs-toggle='collapse'
+      data-bs-target='#navbarNavDropdown'
+      aria-controls='navbarNavDropdown'
+      aria-expanded='false'
+      aria-label='Toggle navigation'
+    >
+      <span class='navbar-toggler-icon'>
+      </span>
+    </button>
+    <div
+      class='collapse navbar-collapse'
+      id='navbarNavDropdown'
+    >
+      <ul class='navbar-nav'>
+        <li class='nav-item dropdown'>
+          <a
+            class='nav-link dropdown-toggle'
+            href='#'
+            role='button'
+            data-bs-toggle='dropdown'
+            aria-expanded='false'
+          >
+            About me
+          </a>
+          <ul class='dropdown-menu'>
+            <li>
+              <a class='dropdown-item' href='/education'>
+                Education
+              </a>
+            </li>
+            <li>
+              <a class='dropdown-item' href='/work'>
+                Work
+              </a>
+            </li>
+            <li>
+              <a class='dropdown-item' href='/skills'>Skills
+              </a>
+            </li>
+            <li><a
+                class='dropdown-item'
+                href='/summary'
+              >Summary
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class='nav-item dropdown'>
+          <a
+            class='nav-link dropdown-toggle'
+            href='#'
+            role='button'
+            data-bs-toggle='dropdown'
+            aria-expanded='false'
+          >
+            Task
+          </a>
+          <ul class='dropdown-menu'>
+            <li>
+              <a class='dropdown-item' href='/task21'>
+                Task 21
+              </a>
+            </li>
+            <li>
+              <a class='dropdown-item' href='/task22'>
+                Task 22
+              </a>
+            </li>
+            <li>
+              <a class='dropdown-item' href='/task31'>
+                Task 31
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class='nav-item dropdown'>
+          <a
+            class='nav-link dropdown-toggle'
+            href='#'
+            role='button'
+            data-bs-toggle='dropdown'
+            aria-expanded='false'
+          >
+            Product
+          </a>
+          <ul class='dropdown-menu'>
+            <li>
+              <a class='dropdown-item' href='/mac'>
+                MacBook
+              </a>
+            </li>
+            <li>
+              <a class='dropdown-item' href='/car'>
+                Toyota Camry
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class='nav-item dropdown'>
+          <a
+            class='nav-link dropdown-toggle'
+            href='#'
+            role='button'
+            data-bs-toggle='dropdown'
+            aria-expanded='false'
+          >
+            Shop
+          </a>
+          <ul class='dropdown-menu'>
+            <li>
+              <a class='dropdown-item' href='/shophome'>
+                Home page
+              </a>
+            </li>
+            <li>
+              <a class='dropdown-item' href='/shopcart'>
+                Cart
+              </a>
+            </li>
+            <li>
+              <a
+                class='dropdown-item'
+                href='/shoporder'
+              >Order
+              </a>
+            </li>
+            <li>
+              <a
+                class='dropdown-item'
+                href='/shopreview'
+              >Review
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class='nav-item'>
+          <a class='nav-link' href='js'>
+            Java Script
+          </a>
+        </li>
+        <li class='nav-item dropdown'>
+          <a
+            class='nav-link dropdown-toggle'
+            href='#'
+            role='button'
+            data-bs-toggle='dropdown'
+            aria-expanded='false'
+          >
+            Other
+          </a>
+          <ul class='dropdown-menu'>
+            <li>
+              <a class='dropdown-item' href='/person'>
+                Person
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <form class='d-flex mt-3' role='search'>
+      <input
+        class='form-control mx-3'
+        type='search'
+        placeholder='Search'
+        aria-label='Search'
+      />
+      <button
+        class='btn btn-outline-primary mx-2'
+        type='submit'
+      >Search
+      </button>
+    </form>
+  </div>
 </nav>

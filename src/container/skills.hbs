@@ -6,40 +6,54 @@
 <div>
 	{{#with main}}
  		<main>
-  			<section>
-				 {{> title data='All skills' big=true}}
-      			<ul>
-					{{#each skills}}
-						<li>
-							{{name}}
+  			<section class='col-12'>
+				<div class='row'>
+					<section class='col-6'>
+						<div class='card'>
+							<div class='card-body'>
+								<h5 class='card-title text-center pb-2 mt-3 mb-3'>
+									{{> title data='All skills' big=true}}
+								</h5>
+								<ul>
+									{{#each skills}}
+										<li class='text fw-medium pb-2'>
+											{{name}}
 
-							{{#if point includeZero=true}} ({{point}}) {{/if}}
-							{{#if isTop}} (TOP) {{/if}}
+											{{#if point includeZero=true}} ({{point}}) {{/if}}
+											{{#if isTop}} (TOP) {{/if}}
 
-							{{#unless point includeZero=true}} (не вивчаємо) {{/unless}}
+											{{#unless point includeZero=true}} (не вивчаємо) {{/unless}}
 
-							{{#unless point}}
-								{{#if point includeZero=true}}
-							 		(зараз вивчаємо)
-								{{/if}}
-							{{/unless}}
-
-						</li>
-					{{/each}}
-    			</ul>
-    		</section>
-			
-			<section>
-				 {{> title data='My hobbies'}}
-      			<ul>
-					{{#each hobbies}}
-						<ol>
-							{{name}}
-							{{#if isMain}} (favourite) {{/if}}
-						</ol>
-					{{/each}}
-    			</ul>
-    		</section>
+											{{#unless point}}
+												{{#if point includeZero=true}}
+													(зараз вивчаємо)
+												{{/if}}
+											{{/unless}}
+										</li>
+									{{/each}}
+								</ul>
+							</div>
+						</div>		
+    				</section>
+					<section class='col-6'>
+						<div class='card'>
+							<div class='card-body py-3'>
+								<h5 class='card-title text-center pb-2 mt-3 mb-3'>
+									{{> title data='My hobbies'}}
+								</h5>	
+								<ul>
+									{{#each hobbies}}
+										<ol class='text fw-medium pb-2'>
+											{{name}}
+											{{#if isMain}} (favourite) {{/if}}
+										</ol>
+									{{/each}}
+								</ul>
+							</div>	
+						</div>	
+					</section>
+				</div>
+			</section>
   		</main>
     {{/with}}
 </div>

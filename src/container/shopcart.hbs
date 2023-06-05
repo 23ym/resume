@@ -138,19 +138,18 @@
         <section class='col-12'>
             <div class='nav'>
                 {{#each footer}}
-                    <div class='row'>
-                        <div class='col-1 g-2'>
-                            {{#each this}}
-                                <div class='nav flex-column'>
-                                    <div class='nav-item fw-semibold'>
-                                        <a
+                    <div class='col-2 g-2'>
+                        {{#each this}}
+                            <div class='nav flex-column'>
+                                <div class='nav-item fw-semibold'>
+                                    <a
                                         class='nav-link  {{#if @last}} disabled {{/if}}'
                                         href='{{link}}'
-                                        >{{text}}</a>
-                                    </div>
+                                        >{{text}}
+                                    </a>
                                 </div>
-                            {{/each}}
-                        </div>
+                            </div>
+                        {{/each}}
                     </div>
                 {{/each}}
             </div>

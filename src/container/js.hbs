@@ -4,171 +4,171 @@
 }}
 
 <div>
-  <main>
-    <section>
-      <p class='h1'>{{name}}</p>
-      <br />
-      <p class='lead'>{{description}}</p>
-      <br />
-      <dl class='row'>
-        <dt class='col-sm-3'>History</dt>
-        <dd class='col-sm-9'>
-          <p>{{history.year}}</p>
-        </dd>
+    <main>
+        <section class='col-12'>
+            <p class='h1'>{{name}}</p>
+            <br />
+            <p class='lead'>{{description}}</p>
+            <br />
+            <dl class='row'>
+                <dt class='col-sm-3'>History</dt>
+                <dd class='col-sm-9'>
+                <p>{{history.year}}</p>
+                </dd>
+                <br />
+                <dt class='col-sm-3'>Founder</dt>
+                <dd class='col-sm-9'>
+                <p>{{history.founder}}</p>
+                </dd>
+            </dl>
+        </section>
         <br />
-        <dt class='col-sm-3'>Founder</dt>
-        <dd class='col-sm-9'>
-          <p>{{history.founder}}</p>
-        </dd>
-      </dl>
-    </section>
-    <br />
-    <hr />
-    <section>
-      <div class='accordion' id='accordionExample'>
-        <div class='accordion-item'>
-          <h2 class='accordion-header'>
-            <button
-              class='accordion-button'
-              type='button'
-              data-bs-toggle='collapse'
-              data-bs-target='#collapseOne'
-              aria-expanded='true'
-              aria-controls='collapseOne'
-            >
-              Types
-            </button>
-          </h2>
-          <div
-            id='collapseOne'
-            class='accordion-collapse collapse show'
-            data-bs-parent='#accordionExample'
-          >
-            <div class='accordion-body'>
-              {{#each types}}
-                <li>{{this}}</li>
-              {{/each}}
+        <hr />
+        <section class='col-12'>
+            <div class='accordion' id='accordionExample'>
+                <div class='accordion-item'>
+                    <h2 class='accordion-header'>
+                        <button
+                            class='accordion-button'
+                            type='button'
+                            data-bs-toggle='collapse'
+                            data-bs-target='#collapseOne'
+                            aria-expanded='true'
+                            aria-controls='collapseOne'
+                            >
+                            Types
+                        </button>
+                    </h2>
+                <div
+                    id='collapseOne'
+                    class='accordion-collapse collapse show'
+                    data-bs-parent='#accordionExample'
+                    >
+                    <div class='accordion-body'>
+                        {{#each types}}
+                            <li>{{this}}</li>
+                        {{/each}}
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-        <div class='accordion-item'>
-          <h2 class='accordion-header'>
-            <button
-              class='accordion-button collapsed'
-              type='button'
-              data-bs-toggle='collapse'
-              data-bs-target='#collapseTwo'
-              aria-expanded='false'
-              aria-controls='collapseTwo'
-            >
-              Syntax
-            </button>
-          </h2>
-          <div
-            id='collapseTwo'
-            class='accordion-collapse collapse'
-            data-bs-parent='#accordionExample'
-          >
-            <div class='accordion-body'>
-              {{#each syntax}}
-                <li>{{this}}</li>
-              {{/each}}
+            <div class='accordion-item'>
+                <h2 class='accordion-header'>
+                    <button
+                        class='accordion-button collapsed'
+                        type='button'
+                        data-bs-toggle='collapse'
+                        data-bs-target='#collapseTwo'
+                        aria-expanded='false'
+                        aria-controls='collapseTwo'
+                        >
+                        Syntax
+                    </button>
+                </h2>
+                <div
+                    id='collapseTwo'
+                    class='accordion-collapse collapse'
+                    data-bs-parent='#accordionExample'
+                    >
+                    <div class='accordion-body'>
+                        {{#each syntax}}
+                            <li>{{this}}</li>
+                        {{/each}}
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-        <div class='accordion-item'>
-          <h2 class='accordion-header'>
-            <button
-              class='accordion-button collapsed'
-              type='button'
-              data-bs-toggle='collapse'
-              data-bs-target='#collapseThree'
-              aria-expanded='false'
-              aria-controls='collapseThree'
-            >
-              Features
-            </button>
-          </h2>
-          <div
-            id='collapseThree'
-            class='accordion-collapse collapse'
-            data-bs-parent='#accordionExample'
-          >
-            <div class='accordion-body'>
-              {{#each features}}
-                <li>{{this}}</li>
-              {{/each}}
+            <div class='accordion-item'>
+                <h2 class='accordion-header'>
+                    <button
+                        class='accordion-button collapsed'
+                        type='button'
+                        data-bs-toggle='collapse'
+                        data-bs-target='#collapseThree'
+                        aria-expanded='false'
+                        aria-controls='collapseThree'
+                        >
+                        Features
+                    </button>
+                </h2>
+                <div
+                    id='collapseThree'
+                    class='accordion-collapse collapse'
+                    data-bs-parent='#accordionExample'
+                >
+                    <div class='accordion-body'>
+                        {{#each features}}
+                            <li>{{this}}</li>
+                        {{/each}}
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-        <div class='accordion-item'>
-          <h2 class='accordion-header'>
-            <button
-              class='accordion-button collapsed'
-              type='button'
-              data-bs-toggle='collapse'
-              data-bs-target='#collapseFour'
-              aria-expanded='false'
-              aria-controls='collapseFour'
-            >
-              Libraries
-            </button>
-          </h2>
-          <div
-            id='collapseFour'
-            class='accordion-collapse collapse'
-            data-bs-parent='#accordionExample'
-          >
-            <div class='accordion-body'>
-              {{#each libraries}}
-                <li>{{this}}</li>
-              {{/each}}
+                <div class='accordion-item'>
+                    <h2 class='accordion-header'>
+                        <button
+                            class='accordion-button collapsed'
+                            type='button'
+                            data-bs-toggle='collapse'
+                            data-bs-target='#collapseFour'
+                            aria-expanded='false'
+                            aria-controls='collapseFour'
+                            >
+                            Libraries
+                        </button>
+                    </h2>
+                    <div
+                        id='collapseFour'
+                        class='accordion-collapse collapse'
+                        data-bs-parent='#accordionExample'
+                        >
+                        <div class='accordion-body'>
+                            {{#each libraries}}
+                                <li>{{this}}</li>
+                            {{/each}}
+                        </div>
+                    </div>
+                </div>
+                <div class='accordion-item'>
+                    <h2 class='accordion-header'>
+                        <button
+                            class='accordion-button collapsed'
+                            type='button'
+                            data-bs-toggle='collapse'
+                            data-bs-target='#collapseFive'
+                            aria-expanded='false'
+                            aria-controls='collapseFive'
+                            >
+                            Tools
+                        </button>
+                    </h2>
+                    <div
+                        id='collapseFive'
+                        class='accordion-collapse collapse'
+                        data-bs-parent='#accordionExample'
+                        >
+                        <div class='accordion-body'>
+                            {{#each tools}}
+                                <li>{{this}}</li>
+                            {{/each}}
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-        <div class='accordion-item'>
-          <h2 class='accordion-header'>
-            <button
-              class='accordion-button collapsed'
-              type='button'
-              data-bs-toggle='collapse'
-              data-bs-target='#collapseFive'
-              aria-expanded='false'
-              aria-controls='collapseFive'
-            >
-              Tools
-            </button>
-          </h2>
-          <div
-            id='collapseFive'
-            class='accordion-collapse collapse'
-            data-bs-parent='#accordionExample'
-          >
-            <div class='accordion-body'>
-              {{#each tools}}
-                <li>{{this}}</li>
-              {{/each}}
+        </section>
+        <br>
+        <hr>
+        <section class='col-12'>
+            <div>
+                <p class='h3'>Community</p>
+                <br>
+                <ul>
+                    {{#each community}}
+                        <li>
+                            {{> link text=name href=type blank=true noLine=true }}
+                        </li>
+                    {{/each}}
+                </ul>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <br/>
-    <hr/>
-    <section>
-      <div>
-		<p class='h3'>Community</p>
-		<br>
-		<ul>
-			{{#each community}}
-				<li>
-					{{> link text=name href=type blank=true noLine=true }}
-				</li>
-			{{/each}}
-		</ul>
-      </div>
-    </section>
-  </main>
+        </section>
+    </main>
 </div>
 
 {{!-- 
