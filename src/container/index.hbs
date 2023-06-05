@@ -3,16 +3,35 @@
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/"
  }}
 
-<div class='p-5'>
-  <h1>USB хаб Type C 12 в 1 HDMI VGA AUX 3.5 mm</h1>
-
-  <button
-    type='button'
-    class='btn btn-primary'
-  >Купити</button>
-</div>
+<main>
+    <div class='row gy-2'>
+        <section class='col-12 mt-4'>
+            {{#with title}}
+                <div>
+                    <p class='h2'>{{name}}</p>
+                </div>
+                <div>
+                    <p class='h5 mt-4'>{{description}}</p>
+                </div>
+            {{/with}}
+        </section>
+        <section class='col-12'>
+            {{#each pages}}
+                <div class='flex-column'>
+                    <div class='col-2'>
+                        <a
+                            class='btn btn-primary mb-3 fs-5 fw-medium w-100'
+                            href={{url}}
+                            role='button'
+                        >{{text}}</a>
+                    </div>
+                </div>
+            {{/each}}
+        </section>
+    </div>
+</main>
 
 {{! 
-    Цей код містить лише те, що буде виводитись в <body>
-    Адже наш layout/default.hbs має вже структуру HTML
+		Цей код містить лише те, що буде виводитись в <body>
+		Адже наш layout/default.hbs має вже структуру HTML
 }}

@@ -6,27 +6,47 @@
 <div>
 	{{#with main}}
 			<main>
-				<section>
-					{{> title data='My education' big=true}}
-					<ul>
-						{{#each educations}}
-							<li>
-								{{name}}
-								{{#unless isEnd}} (ще навчаюсь) {{/unless}}
-							</li>
-						{{/each}}
-					</ul>
-				</section>
-
-				<section>
-					{{> title data='My certificates'}}
-					<ul>
-						{{#each certificates}}
-							<li>
-								{{name}} ({{id}})
-							</li>
-						{{/each}}
-					</ul>
+				<section class='col-12'>
+					<div class='row'>
+						<section class='col-6'>
+							<div class='card'>
+								<div class='card-body'>
+									<h5 class='card-title text-center pb-3'>
+										{{> title data='My education' big=true}}
+									</h5>
+										<p class='text fw-medium'>
+											<ul>
+												{{#each educations}}
+													<li class='text fw-medium pb-2'>
+														{{name}}
+														{{#unless isEnd}} (ще навчаюсь) {{/unless}}
+													</li>
+												{{/each}}
+											</ul>	
+										</p>
+									</ul>
+								</div>
+							</div>
+						</section>
+						<section class='col-6'>
+							<div class='card'>
+								<div class='card-body'>
+									<h5 class='card-title text-center pb-3'>
+										{{> title data='My certificates'}}
+									</h5>
+									<p class='card-text'>
+										<ul>
+											{{#each certificates}}
+												<ol class='text fw-medium pb-2'>
+													{{name}} ({{id}})
+												</ol>
+											{{/each}}
+										</ul>
+									</p>
+								</div>
+							</div>		
+						</section>
+					</div>
 				</section>
 			</main>
 	{{/with}}

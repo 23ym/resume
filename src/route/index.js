@@ -37,12 +37,98 @@ var footer = {
 // router.get Створює нам один ентпоїнт
 
 //           ↙ тут вводимо шлях (PATH) до сторінки
-router.get('/', function (req, res) {
+router.get('/index', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
+  res.render('index', {
   //                  ↑↑ сюди вводимо JSON дані
+  layout: 'index',
+
+  page: {
+	title: 'Resume | Project',
+  },
+
+  header: {
+	name: {
+		firstname: "Ім'я",
+		lastname: 'Прізвище',
+	},
+	projects:{
+		name: 'Resume project',
+	},
+},
+  title: {
+		name: 'Список сторінок',
+		description: 'Сторінки створені під час практики HTML',
+	},
+  pages: [
+        {
+			text: 'Car',
+			url: 'http://localhost:3000/car',
+        },
+        {
+			text: 'Education',
+			url: 'http://localhost:3000/education',
+        },
+		{
+			text: 'Index',
+			url: 'http://localhost:3000/index',
+		},
+		{
+			text: 'Java Script',
+			url: 'http://localhost:3000/js',
+		}, 
+		{
+			text: 'Mac',
+			url: 'http://localhost:3000/mac',
+		},
+		{
+			text: 'Person',
+			url: 'http://localhost:3000/person',
+		},
+		{
+			text: 'Shopcart',
+			url: 'http://localhost:3000/shopcart',
+		},
+		{
+			text: 'Shophome',
+			url: 'http://localhost:3000/shophome',
+		},
+		{
+			text: 'Shoporder',
+			url: 'http://localhost:3000/shoporder',
+		},
+		{
+			text: 'Shopreview',
+			url: 'http://localhost:3000/shopreview',
+		},
+		{
+			text: 'Skills',
+			url: 'http://localhost:3000/skills',
+		},
+		{
+			text: 'Summary',
+			url: 'http://localhost:3000/summary',
+		},
+		{
+			text: 'Task21',
+			url: 'http://localhost:3000/task21',
+		},
+		{
+			text: 'Task22',
+			url: 'http://localhost:3000/task22',
+		},
+		{
+			text: 'Task31',
+			url: 'http://localhost:3000/task31',
+		},
+		{
+			text: 'Work',
+			url: 'http://localhost:3000/work',
+		},                    
+      ],	
+	})	
 })
 
 // ================================================================

@@ -6,97 +6,83 @@
 <div>
 	{{#with main}}
 		<main>
-			<section>
-				{{> title data='Work history' big=true}}
+			<section class='col-12'>
+				<div class='card'>
+					<div class='card-body'>
+						<h5 class='card-title text-center mb-3'>
+							{{> title data='Work history' big=true}}
+						</h5>
+						<h6 class='card-subtitle fs-4 mb-3 text-body-secondary'>
+							<ul>
+								{{#each works}}	
+								<ol>
+									<div>
+										{{position}}
+									</div>
+									<div class='text pt-3 pb-3'>
+										{{duration.from}} - 
+										{{#if duration.to}}
+											{{duration.to}} 
+										{{else}}
+											(по даний час)
+										{{/if}}
+									</div>
+									<div class='text pt-3 pb-3'>
+										{{#if company.url}}
+										{{> link text=company.name href=company.url blank=true noLine=true}}
+										{{else}}
+										<b>{{company.name}}</b> 
+										{{/if}}
+									</div>
+									<div>
+										<strong>Projects ({{projectAmount}})</strong>
+									</div>
+								</ol>	
+							</ul>
+						</h6>
+						<p class='card-text pb-2'>
+							{{#each projects}}
+								<ol>
+									<div class='text fs-4 pt-3 pb-3'>
+										{{> link text=name href=url blank=true noLine=true}}
+									</div>
+									<div class='text fw-medium fs-5 pt-3 pb-3'>
+										<p>{{about}}</p>
+									</div>
+									<div class='text fw-medium fs-5 pt-3 pb-3'>
+										<em>'Project stacks' ({{stackAmount}})</em>
+									</div>
+									<div class='text fw-medium fs-5 pt-3 pb-3'>
+										<ul>
+											{{#each stack}}
+												<li>{{name}}</li>
+											{{/each}}
+										</ul>
+									</div>	
+									<div class='text fw-medium fs-5 pt-3 pb-3'>
+										<em>'Project awards' ({{awardAmount}})</em>
+									</div>
+									<div class='text fw-medium fs-5 pt-3 pb-3'>
+										<ul>
+											{{#each awards}}
+												<li>{{name}}</li>
+											{{/each}} 
+										</ul>
+									</div>			
+								</ol>
+							{{/each}}
+						</p>
+					</div>
+				</div>
 				<div>
-					<ul>
-						{{#each works}}	
-							<li>
-								<div>{{position}}</div>
-
-								<br>
-								
-								<div>
-									{{duration.from}} - 
-									{{#if duration.to}}
-										 {{duration.to}} 
-									{{else}}
-										 (по даний час)
-									{{/if}}
-								</div>
-
-								<br>
-
-								<div>
-									{{#if company.url}}
-									{{> link text=company.name href=company.url blank=true noLine=true}}
-									{{else}}
-									 <b>{{company.name}}</b> 
-									{{/if}}
-								</div>
-								
-								<br>
-								
-								<div>
-									<strong>Projects ({{projectAmount}})</strong>
-								</div>
-
-								<br>
-
-								<ul>
-									{{#each projects}}
-									<li>
-										<div>{{> link text=name href=url blank=true noLine=true}}</div>
-									
-										<br>
-									
-									 	<div>
-											<p>{{about}}</p>
-										</div>
-
-										<br>
-
-										<div>
-											<em>'Project stacks' ({{stackAmount}})</em>
-										</div>
-
-										<br>
-
-										<div>
-											<ul>
-												{{#each stack}}
-													<li>{{name}}</li>
-												{{/each}}
-											</ul>
-										</div>	
-
-										<br>
-
-										<div>
-											<em>'Project awards' ({{awardAmount}})</em>
-										</div>
-
-										<br>
-
-										<div>
-											<ul>
-												{{#each awards}}
-													<li>{{name}}</li>
-												{{/each}}
-											</ul>
-										</div>			
-									</li>
-								{{/each}}
-								</ul>
-							</li>
-							<br>
+					</ul>
 						{{/each}}	
 					</ul>	
 				</div>
 			</section>
 		</main>
   	{{/with}}
-  </div>
+</div>
 
 {{!-- 
     Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
