@@ -1,0 +1,107 @@
+{{! 
+Це код container файлу для web сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - '/web'
+}}
+
+<div>
+	{{#with web}}
+		<h1>Web Development Languages</h1>
+		<br>
+		<ul>
+			{{#each languages}}
+				<li>
+					<h2>{{ name }}</h2>
+					<p><strong>Version:</strong> {{ version }}</p>
+					<p>{{ description }}</p>
+
+					{{#if elements}}
+						<h3>HTML Elements</h3>
+						<br>
+						<ul>
+							{{#each elements}}
+								<li>
+									<h4>{{ name }}</h4>
+									<p>{{ description }}</p>
+									{{#if attributes}}
+										<h5>Attributes</h5>
+										<ul>
+											{{#each attributes}}
+												<li>
+													<p><strong>{{ name }}</strong>: 
+													{{ description }}</p>
+												</li>
+											{{/each}}
+											<br>
+										</ul>
+									{{/if}}
+								</li>
+							{{/each}}
+						</ul>
+						<br>
+						<hr>
+					{{/if}}
+					
+					{{#if properties}}
+						<h3>CSS Properties</h3>
+						<br>
+						<ul>
+							{{#each properties}}
+								<li>
+									<h4>{{ name }}</h4>
+									<p>{{ description }}</p>
+									{{#if values}}
+										<h5>Values</h5>
+										<ul>
+											{{#each values}}
+												<li>
+													<p><strong>{{ value }}</strong>: 
+													{{ description }}</p>
+												</li>
+											{{/each}}
+											<br>
+										</ul>
+									{{/if}}
+								</li>
+							{{/each}}
+						</ul>
+						<br>
+						<hr>
+					{{/if}}
+
+					{{#if functions}}
+						<h3>JavaScript Functions</h3>
+						<br>
+						<ul>
+							{{#each functions}}
+								<li>
+									<h4>{{ name }}()</h4>
+									<p>{{ description }}</p>
+									{{#if parameters}}
+									<h5>Parameters</h5>
+									<ul>
+										{{#each parameters}}
+											<li>
+												<p><strong>{{ name }}</strong> 
+												({{ type }}): {{ description }}</p>
+											</li>
+										{{/each}}
+										<br>
+									</ul>
+									{{/if}}
+								</li>
+							{{/each}}
+						</ul>
+						<br>
+						<hr>
+					{{/if}}
+					
+				</li>
+			{{/each}}
+		</ul>
+	{{/with}}
+</div>
+
+{{!-- 
+    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/basic.hbs
+    Адже наш layout/default.hbs має вже структуру HTML
+--}}
